@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* color: aliceblue; */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1)),
+		url(./img/download.png) no-repeat center/cover;
+}
+
+#weather{
+    
+    background: url(./img/download.png) no-repeat center/cover;
+    width: 350px;
+    height: 600px;
+    padding: 30px 20px;
+	border-radius: 10px;
+	transition: 0.4s;
+}
+.hot{
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1)),
+    url(./img/download.png) no-repeat center/cover;
+}
+.hot #weather{
+    background: url(./img/download.png) no-repeat center/cover;
+}
+.cool{
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1)),
+    url(./img/cool.png) no-repeat center/cover;
+}
+.cool #weather{
+    background: url(./img/cool.png) no-repeat center/cover;
+}
+
+ .search{
+    background: rgba(255,255,255,0.2);
+    padding:10px 20px;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    width: 100%;
+    height: 40px;
+    border-radius:0 15px;
+    box-shadow: 0 5px 4px rgba(0, 0, 0, 0.2);
+    transition: 0.3s ease;
+}
+
+.search:focus {
+    background-color: rgba(255, 255, 255, 0.8);
+	border-radius: 15px 0 15px 0;
+}
+
+
+.content{
+    margin-top: 40px;
+    color: #fff;
+    text-align: center;
+    transition: 0.4s;
+}
+
+.content h1{
+    text-shadow: 2px 3px rgba(0, 0, 0, 0.7);
+}
+.time{
+    font-size: 18px;
+    margin: 10px 0px 30px 0px;
+}
+.temparature{
+    padding: px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.8);
+    font-size: 65px;
+    box-shadow: 4px 4px rgba(0, 0, 0, 0.4);
+    margin:0px 30px;
+    padding: 20px 0px;
+    font-weight: bold;
+}
+.short-desc{
+    font-weight: bold;
+    font-size: 40px;
+    margin: 30px;
+}
+.more-desc{
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0px;
+}
+.item i {
+    font-size: 25px;
+}
+.hide{
+    visibility: none;
+    opacity: 0;
+}
