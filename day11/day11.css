@@ -1,0 +1,134 @@
+:root{
+    --success :rgb(0, 128, 0);
+    --warning :rgb(255, 165, 0);
+    --error : rgb(255, 0, 0);
+
+    --success-lite :rgb(0, 128, 0,0.4);
+    --warning-lite :rgb(255, 165, 0,0.4);
+    --error-lite : rgb(255, 0, 0,0.4);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    background: #ecf0f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.control{
+    display: flex;
+    justify-content: space-around;
+}
+button{
+    cursor: pointer;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    margin: 0 10px;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: white;
+}
+.success{
+    background: var(--success);
+}
+.warning,.toast.warning .time{
+    background: var(--warning);
+}
+.error,.toast.error .time{
+    background-color:var(--error);
+}
+#toasts{
+    border-radius: 5px;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+
+}
+.toast{
+    font-size: 26px;
+    padding: 15px 22px;
+    color: white;
+    text-align: center;
+    border: none;
+    border-left: 6px solid var(--success);
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    /* display: flex; */
+    animation: slideshow 2.5s ease forwards;
+}
+.toast i{
+    margin-right:  10px;
+}
+.toast .time{
+    left: 0;
+    position: absolute;
+    bottom: 0px;
+    background: var(--success);
+    height: 4px;
+    width: 100%;
+    animation: time 5s linear forwards;
+}
+ 
+.toast.success,.toast.success .time{
+    background: var(--success-lite);
+}
+.toast.warning{
+    background: var(--warning-lite);
+    border-left: 6px solid var(--warning);
+
+}
+.toast.error{
+    background: var(--error-lite);
+    border-left: 6px solid var(--error);
+}
+.hide{
+    display: none;
+}
+
+
+@keyframes time {
+    0%{
+        width: 100%;
+    }
+
+    100%{
+        width: 0%;
+    }
+}
+
+@keyframes slideshow{
+    0%{
+        transform: translateX(100%);
+    }
+    25%{
+        transform: translateX(-10%);
+    }
+    50%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-10px);
+    }
+}
+
+@keyframes slidehide{
+    0%{
+        transform: translateX(0%);
+    }
+    25%{
+        transform: translateX(10%);
+    }
+    50%{
+        transform: translateX(-10%);
+    }
+    100%{
+        transform: translateX(130%);
+    }
+}
