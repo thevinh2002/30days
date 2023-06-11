@@ -1,0 +1,70 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    /* width: 100vw; */
+    background: linear-gradient(to right, #ffe000, #799f0c);
+}
+
+.content{
+    background: white;
+    width: 400px;
+    margin: 150px auto;
+    padding-top: 10px ;
+    border-radius: 6px;
+    overflow: hidden;
+}
+form{
+    border-bottom: 3px solid #aaa;
+    padding: 10px 20px;
+    font-size: 22px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.input{
+    margin-right: 20px;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 24px;
+}
+.add{
+    cursor: pointer;
+    padding:5px 20px ;
+    border: none;
+    background: yellowgreen;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 5px;
+}
+.todos{
+    list-style: none;
+}
+.todos li{
+    cursor: pointer;
+    justify-content: space-between;
+    display: flex;
+    font-size: 22px;
+    padding: 15px 20px;
+    border-bottom: 2px solid #ccc;
+    transition: 0.5s;
+}
+.todos li span{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.todos i{
+    display: none;
+}
+.todos li:hover i{
+    display: inline;
+}
+.completed span{
+    text-decoration: line-through;
+    color: #ccc;
+}
