@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Typing Animation Effect</title>
+		<link rel="stylesheet" href="day20.css" />
+	</head>
+	<body>
+		<div class="text-typing">
+			<p>Nodemy - Thực Chiến - Sáng Tạo</p>
+		</div>
+	</body>
+
+    <script>
+        var p = document.querySelector('.text-typing p');
+        var origin = p.innerHTML
+        var isForward = true
+        var index =0
+
+        setInterval(() => {
+            if(isForward){
+                index ++
+                if(index >= origin.length)
+                {
+                isForward = false
+                }
+           
+            }else{
+                index --
+                if(index <= 0 ){
+                    isForward = true
+                }
+            }
+            p.innerText = origin.substring(0,index)
+        }, 200);
+    </script>
+</html>
